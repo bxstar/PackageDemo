@@ -16,5 +16,9 @@ namespace UnityMVCDemo.Controllers
             return View();
         }
 
+        public ActionResult ServerMethod()
+        {
+            return Content("Hello ajax" + DateTime.Now.ToString("HH:mm:ss") + "\n");
+        }
     }
 }

@@ -4,3 +4,51 @@
 }
 
 <h2>主页</h2>
+
+<input type="button" value="传统调用" onclick="InvokeAjax();" />
+
+<p></p>
+<a href="javascript:InvokeAjax();">传统调用</a>
+
+<p></p>
+
+@Ajax.ActionLink("Razor的Ajax辅助方法,弹出框", "ServerMethod", new AjaxOptions() { OnSuccess = "success" })
+
+<p></p>
+
+@Ajax.ActionLink("Razor的Ajax辅助方法,替换内容", "ServerMethod", new AjaxOptions() { InsertionMode = InsertionMode.Replace, UpdateTargetId = "result" })
+
+<p></p>
+
+@Ajax.ActionLink("Razor的Ajax辅助方法,后面插入", "ServerMethod", new AjaxOptions() { InsertionMode = InsertionMode.InsertAfter, UpdateTargetId = "result" })
+
+<p></p>
+
+@Ajax.ActionLink("Razor的Ajax辅助方法,前面插入", "ServerMethod", new AjaxOptions() { InsertionMode = InsertionMode.InsertBefore, UpdateTargetId = "result" })
+
+
+
+<h2>内容部分</h2>
+<div id="result">
+原始内容
+</div>
+     
+@section js{
+
+    <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+
+    <script type="text/javascript">
+        function InvokeAjax() {
+            $.get("/Home/ServerMethod", null, function (data) {
+                alert(data);
+            }, "text");
+
+        }
+
+        function success(data) {
+            alert(data );
+        }
+    </script>
+
+}
