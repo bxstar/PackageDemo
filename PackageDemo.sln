@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityMVCDemo", "UnityMVCDemo\UnityMVCDemo.csproj", "{B3DE558F-A7C8-4414-82C2-5B7FBC665962}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityMVC_FrameWork4.5", "UnityMVC_FrameWork4.5\UnityMVC_FrameWork4.5.csproj", "{B3DE558F-A7C8-4414-82C2-5B7FBC665962}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
