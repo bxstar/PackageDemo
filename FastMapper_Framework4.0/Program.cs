@@ -38,12 +38,13 @@ namespace FastMapperDemo
         }
 
         /// <summary>
-        /// 单个对象，自定义属性对应关系的转换
+        /// 单个对象，自定义属性对应关系的转换，忽略的属性
         /// </summary>
         private static void SingleMdoelCustom_Test()
         {
             //定义配置
             TypeAdapterConfig<APIModel.InvoiceModel, DataModel.AmpOrder.InvoiceEntity>.NewConfig()
+                .IgnoreMember(dest=>dest.NdeliveryFullAddress)
                 .MapFrom(dest => dest.BID, src => src.UserID.Value.ToString()).MapFrom(dest => dest.GCOrderID, src => src.BalanceRechargeID);
 
             APIModel.InvoiceModel apiModel = new APIModel.InvoiceModel();
